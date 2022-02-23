@@ -1,0 +1,22 @@
+package chattingcode;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ChattFrame extends JFrame {
+
+	public ChattFrame() {
+		setTitle("MyChat1.0");
+		setSize(300, 300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+
+		northPanel = new JPanel();
+
+	}
+
+	public static void main(String[] args) {
+		new ChattFrame();
+	} 
+}

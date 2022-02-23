@@ -1,0 +1,7 @@
+package chattingcode;
+
+import javax.swing.JFrame;
+
+public class ChattFrame extends JFrame{
+
+}

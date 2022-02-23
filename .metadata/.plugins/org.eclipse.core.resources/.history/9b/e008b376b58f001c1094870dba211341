@@ -1,0 +1,77 @@
+package chattingcode;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.List;
+import java.util.Vector;
+
+public class MyServerSocket {
+
+	ServerSocket serverSocket;
+	public MyServerSocket() {
+		try {
+
+			serverSocket = new ServerSocket();
+			List<ClientThread>고객리스트;
+			
+			while (true) {
+				Socket socket = serverSocket.accept();
+				System.out.println("클라이언트가 연결됨");
+				ClientThread t = new 고객전담스레드(socket);
+			고객리스트.add(t);
+			System.out.println("고객리스트 크기:" + 고객리스트.size);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		class ClientThread implements Runnable {
+			String usernameString;
+			Socket socket;
+			BufferedReader reader;
+			BufferedWriter wirter;
+			boolean islogin;
+
+			public ClientThread(Socket socket) {
+				this.socket = socket;
+				try {
+					reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+					wirter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+			}
+			
+			public void chatPublic(String msg) {
+				
+				try {
+					for(고객전담스레드 t: 고객리스트) {
+						if(t != this) {
+							t.w
+							
+						}
+						
+					}
+				} catch (Exception e) {
+				e.printStackTrace();
+				}
+			}
+
+			@Override
+			public void run() {
+				try {
+					
+				} catch (Exception e) {
+				}
+
+			}
+		}
+	}
+}

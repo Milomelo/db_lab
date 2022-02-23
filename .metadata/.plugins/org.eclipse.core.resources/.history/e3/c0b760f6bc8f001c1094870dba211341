@@ -1,0 +1,16 @@
+package chattingcode;
+
+import javax.swing.JFrame;
+
+public class ChattFrame extends JFrame {
+
+	public ChattFrame() {
+	
+	}
+	
+	private void initSetting() {
+		setSize(300,300);
+		setLocation(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

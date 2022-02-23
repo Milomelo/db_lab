@@ -1,0 +1,8 @@
+package site.metacoding.jdb;
+
+public class DBEx02 {
+
+	public static void main(String[] args) {
+		
+	}
+}

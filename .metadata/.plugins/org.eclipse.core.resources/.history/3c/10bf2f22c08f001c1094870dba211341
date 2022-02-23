@@ -1,0 +1,29 @@
+package chattingcode;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ChattFrame extends JFrame {
+
+	JPanel northPanel, southPanel;
+	
+	public ChattFrame() {
+		setTitle("MyChat1.0");
+		setSize(300, 300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		northPanel = new JPanel();
+		southPanel = new JPanel();
+		add(northPanel, BorderLayout.NORTH);
+		add(southPanel,BorderLayout.SOUTH)
+		setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+		new ChattFrame();
+	} 
+}
